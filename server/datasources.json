@@ -1,0 +1,32 @@
+{
+  "mysqlDs": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "url": "",
+    "database": "rest-api-db",
+    "password": "minh",
+    "name": "mysqlDs",
+    "user": "root",
+    "connector": "mysql"
+  },
+  "db": {
+    "name": "db",
+    "localStorage": "",
+    "file": "",
+    "connector": "memory"
+  },
+  "Email": {
+  "name": "mail",
+  "connector": "mail",
+  "transports": [{
+    "type": "SMTP",
+    "host": "smtp.gmail.com",
+    "secure": true,
+    "port": 465,
+    "auth": {
+      "user": "konttigrafana@gmail.com",
+      "pass": "TimoVaisanen"
+    }
+  }]
+}
+}

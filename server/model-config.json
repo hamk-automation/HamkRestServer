@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "user": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "sensor": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "building": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "location": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "system": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "mysqlDs",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "user",
+        "foreignKey": "userId"
+      }
+    }
+  },
+    "Email": {
+     "dataSource": "Email"
+   },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mysqlDs",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mysqlDs",
+    "public": false
+  }
+}

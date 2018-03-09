@@ -1,0 +1,35 @@
+
+<script>
+        window.localStorage.setItem('swagger_accessToken', '<%= accessToken %>');
+</script>
+<main>
+  <h1>Hi <%= email %>.</h1>
+  <p>Your accessToken is: <%= accessToken %></p>
+<section>
+    <form action="<%= redirectUrl %>" method="post" autocomplete="off">
+    <fieldset>
+      <legend>Change password form</legend>
+      <div>
+        <label for="password">Old Password:</label>
+        <input type="password" name="oldPassword"/>
+      </div>
+      <div>
+        <label for="password">New Password:</label>
+        <input type="password" name="newPassword"/>
+      </div>
+      <div>
+        <input type="submit" value="Change password"/>
+      </div>
+    </fieldset>
+  </form>
+</section>
+<br/>
+<br/>
+  Click <a href="/explorer/docs">here</a> for API documentation.
+  <br/>
+  <br/>
+    Click <a href="/explorer">here</a> to test API endpoints.
+    <br/>
+  <br/>
+  <a href="/explorer/logout?access_token=<%= accessToken %>">Log out</a>
+</main>
