@@ -39,4 +39,4 @@ From node-modules change loopback/common/models/user.js:
 
 User-managment is done by MySQL-database and loopback MySQL module. 
 
-Data-schemas/models are specified by MySQL but measurements/data is read from InfluxDB.
+Data-schema/models are specified by MySQL but measurements/data is read from InfluxDB.
