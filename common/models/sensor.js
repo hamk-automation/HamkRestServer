@@ -115,8 +115,8 @@ function influxDbQuery(context, cb) {
         qs: {
             pretty: 'true',
             db: context.building.name,
-            u: 'rest_api',
-	          p: 'dataoverload',
+            u: '',
+	          p: '',
             q: queryString
         }
     }
@@ -181,8 +181,8 @@ function influxDbWrite(context, cb) {
         url: 'http://localhost:8086/write',
         qs: {
             db: context.building.name,
-	          u: 'rest_api',
-	          p: 'dataoverload',
+	          u: '',
+	          p: '',
         },
         body: writeString
     }
