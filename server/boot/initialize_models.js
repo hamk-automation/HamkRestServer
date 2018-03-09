@@ -64,12 +64,12 @@ module.exports = function(app) {
 
         function createDefaultAdmin(context, cb) {
             User.findOrCreate(
-                { where: { email: 'minh.tran@hamk.fi' } },
+                { where: { email: '' } },
                 {
-                    email: 'minh.tran@hamk.fi',
-                    password: 'minmax',
+                    email: '',
+                    password: '',
                     realm: '',
-                    username: 'admin0',
+                    username: '',
                     emailVerified: true,
                     role: 'admin'
                 },
@@ -111,7 +111,7 @@ module.exports = function(app) {
                         return
                     }
                     if (roleMapping == null) {
-                        // Make minh.tran@hamk.fi an admin
+                        // Make spesific user to admin
                         context.role.principals.create({
                             principalType: RoleMapping.USER,
                             principalId: context.user.id
